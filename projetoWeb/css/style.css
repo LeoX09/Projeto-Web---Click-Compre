@@ -19,7 +19,7 @@ nav {
 }
 
 .custom-container {
-  max-width: 1440px;
+  max-width: 2440px;
 }
 
 .my-tag {
@@ -127,6 +127,7 @@ nav {
   }
 } 
 
+/* Itens */
 .category-list {
   display: flex;
   justify-content: center;
@@ -142,20 +143,25 @@ nav {
   padding: 10px;
   margin: 0 15px; /* Espaço entre os itens */
   width: 150px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Aplica a transição de escala ao item */
 }
 
 .category-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse no item */
 }
 
 .category-item img {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  padding: 10px;
+  border-radius: 50%; /* Faz a imagem ser circular */
+  border: 2px solid #ddd; /* Borda padrão da imagem */
+  transition: border-color 0.3s ease; /* Transição suave para a borda da imagem */
 }
+
+.category-item:hover img {
+  border-color: #84C800; /* Borda verde ao passar o mouse sobre o item */
+}
+
 .category-item p {
   margin-top: 15px;
   font-size: 16px;
@@ -164,4 +170,74 @@ nav {
 }
 .category-list::-webkit-scrollbar {
   display: none; /* Oculta a barra de rolagem horizontal */
+}
+
+/* Marcas de celulares */
+.custom-card-container {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 15px;
+  text-align: center;
+  height: 250px;
+  width: 250px;
+}
+
+.custom-card-container:hover {
+  transform: scale(1.05); /* Efeito de aumentar o tamanho do cartão */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave ao hover */
+}
+
+.custom-card-container img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: 150px;
+  position: relative;
+  left: 40px;
+  top: 10px;
+}
+
+.custom-card-body {
+  margin-top: 15px;
+}
+
+.discount-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.discount-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Personalização de cores */
+.bg-yellow {
+  background-color: #fdd835;
+}
+
+.bg-green {
+  background-color: #66bb6a;
+}
+
+.bg-blue {
+  background-color: #42a5f5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .custom-card-container img {
+      width: 150px;
+      height: auto;
+  }
 }
