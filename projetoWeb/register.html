@@ -7,6 +7,7 @@
   <title>Click&Compre :: Registrar-se</title>
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
@@ -30,31 +31,26 @@
                 Categorias
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">SmartPhones</a>
-                <a class="dropdown-item" href="#">Tablets</a>
-                <a class="dropdown-item" href="#">SmartTvs</a>
-                <a class="dropdown-item" href="#">SmartWhatchs</a>
+                <a class="dropdown-item" href="#">SmartPhone</a>
+                <a class="dropdown-item" href="#">Eletrônicos</a>
+                <a class="dropdown-item" href="#">Livro</a>
+                <a class="dropdown-item" href="#">Acessórios</a>
+                <a class="dropdown-item" href="#">Móveis</a>
+                <a class="dropdown-item" href="#">Relógios</a>
+                <a class="dropdown-item" href="#">Cosméticos</a>
               </div>
             </li>
             <!--FIM da categorias-->
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">SmartPhone</a>
+              <a class="nav-link text-white" href="contatosite.html">Contato</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">SmartTv</a>
-            </li>
-            <li class="nav-item"></li>
-            <a class="nav-link text-white" href="#">Tablet</a>
-            </li>
-            <li class="nav-item"></li>
-            <a class="nav-link text-white" href="#">SmartWatch</a>
-            </li>
+
           </ul>
           <div class="w-50">
             <form class="form-inline my-2 my-lg-0">
               <!--Início Barra de pesquisa-->
-              <input class="form-control mr-sm-1" type="search" placeholder="Buscar produtos"
-                aria-label="Search" style="width: 370px;">
+              <input class="form-control mr-sm-1" type="search" placeholder="Buscar produtos" aria-label="Search"
+                style="width: 370px;">
               <!--FIM Barra de pesquisa-->
               <button class="btn btn-warning my-2 my-sm-0" type="submit">Pesquisar</button>
             </form>
@@ -63,8 +59,8 @@
           <div class="align-self-end">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-white" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <a class="nav-link text-white" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                     <path fill-rule="evenodd"
                       d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
@@ -81,101 +77,95 @@
                   </svg>
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                  <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1"/>
+                </svg></a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </nav>
+
       <main class="flex-fill">
         <div class="container" style="margin-top:80px;">
+          <div class="row justify-content-center">
           <form>
             <div class="form-row">
-              <div class="form-group col-md-6">
+              <div class="form-group">
+
+                <div class="form-group">
+                  <label for="nome">Nome</label>
+                  <input type="text" class="form-control" id="nome" placeholder="Nome Completo">
+                </div>
+
+                <div class="form-group">
+                 <label for="inputCPF">CPF</label>
+                 <input type="text" class="form-control" id="inputCPF" name="cpf" placeholder="000.000.000-00" maxlegth="14" required>
+                </div>
+
+                <div class="form-group">
+                  <div>
+                    <label for="genero">Gênero</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
+                    <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                    <label class="form-check-label" for="inlineRadio2">Feminino</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
+                    <label class="form-check-label" for="inlineRadio2">Não Informar</label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="inputNascimento">Data de Aniversário:</label> <br>
+                  <input type="date" id="inputNascimento" name="data_nascimento" required>
+                </div>
+                
+                <div class="form-group">
                 <label for="inputEmail4">Email</label>
                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
               </div>
-              <div class="form-group col-md-3">
+
+              <div class="form-group">
                 <label for="inputPassword4">Senha</label>
                 <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
-                <span id="passwordHelpInline" class="text-muted">A senha deve ter no mínimo de 8 a 20 caracteres</span>
+                <span id="passwordHelpInline" class="text-muted">A senha deve ter no mínimo de 8 caracteres</span>
               </div>
-              <div class="form-grup col-md-3">
+              <div class="form-grup">
                 <label for="confirmPassword4">Confirmar Senha</label>
                 <input type="password" class="form-control" id="confirmPassword4" placeholder="Confirmar Senha">
-
+              </div>
+              <br>
+              <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-block text-white" style="background-color:#84C800;">Criar Cadastro</button>
               </div>
             </div>
-            <div class="form-group">
-              <label for="inputAddress">Endereço</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-            </div>
-            <div class="form-group">
-              <label for="inputAddress2">Endereço 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity">
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputEstado">Estado</label>
-                <select id="inputEstado" class="form-control">
-                  <option selected>Escolher...</option>
-                  <div>
-                    <option>AC</option>
-                    <option>AL</option>
-                    <option>AP</option>
-                    <option>AM</option>
-                    <option>BA</option>
-                    <option>CE</option>
-                    <option>DF</option>
-                    <option>ES</option>
-                    <option>GO</option>
-                    <option>MA</option>
-                    <option>MG</option>
-                    <option>MT</option>
-                    <option>MS</option>
-                    <option>PE</option>
-                  </div>
-                </select>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputCEP">CEP</label>
-                <input type="text" class="form-control" id="inputCEP">
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
-                <label class="form-check-label" for="gridCheck">
-                  Clique em mim
-                </label>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
           </form>
+        </div>
         </div>
       </main>
     <footer class="boorder-top text-muted bg-light">
-      <div class="container">
-        <div class="row py-3">
-          <div class="col-12 col-md-4 text-center">
-            &copy; 2024 - Click&Compre Ltda ME <br> Rua Não Existe, 154, Xique-Xique/BH <br> CPNJ 99.999.999/0001-99
-          </div>
-          <div class="col-12 col-md-4 text-center">
-            <a href="politicasdeprivacidade.html" class="text-decoration-none text-dark">Política de Privacidade</a> <br>
-            <a href="termos.html" class="text-decoration-none text-dark">Termos de Uso</a> <br>
-            <a href="quemsomos.html" class="text-decoration-none text-dark">Quem somos</a> <br>
-          </div>
-          <div class="col-12 col-md-4 text-center">
-            <a href="#" class="text-decoration-none text dark">Contato pelo Site</a> <br>
-            E-mail:<a href="#" class="text-decoration-none text dark">click&compre@github.com</a> <br>
-            Telefone:<a href="#" class="text-decoration-none text dark">(11)8922-2922</a> <br>
+        <div class="container">
+          <div class="row py-3">
+            <div class="col-12 col-md-4 text-center">
+              &copy; 2024 - Click&Compre Ltda ME <br> Rua Não Existe, 154, Xique-Xique/BH <br> CPNJ 99.999.999/0001-99
+            </div>
+            <div class="col-12 col-md-4 text-center">
+              <a href="politicasdeprivacidade.html" class="text-decoration-none text-dark">Política de Privacidade</a>
+              <br>
+              <a href="termos.html" class="text-decoration-none text-dark">Termos de Uso</a> <br>
+              <a href="quemsomos.html" class="text-decoration-none text-dark">Quem somos</a> <br>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

@@ -9,6 +9,14 @@ body {
 p {
     font-size: 16px;
 }
+
+.pp {
+  position: relative;
+  top: 79px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .lista {
     font-size: 16px;
 }
@@ -35,10 +43,11 @@ nav {
 .divisor {
   width: auto;
   height: 1px;
-  background-color: #EDEDED;
+  background-color: #bfbfbf;
   align-items: center;
   margin-top: 80px;
 }
+
 .card {
   width: 225px;
   height: auto;
@@ -99,6 +108,15 @@ nav {
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+/* Icones de favorito */
+#fav-icon {
+  color: grey;      /* Cor padrão (não favorito) */
+  cursor: pointer;  /* Mostra que é clicável */
+}
+
+#fav-icon.favorited {
+  color: red;  /* Cor quando estiver nos favoritos */
 }
 
 .row {
@@ -223,15 +241,15 @@ nav {
 
 /* Personalização de cores */
 .bg-yellow {
-  background-color: #fdd835;
+  background: linear-gradient(180deg, rgba(255, 213, 89, 0.75) 0%, rgba(224, 167, 0, 0.75) 100%);
 }
 
 .bg-green {
-  background-color: #66bb6a;
+  background: linear-gradient(180deg, rgba(132, 200, 0, 0.75) 0%, rgba(103, 155, 1, 0.75) 100%);
 }
 
 .bg-blue {
-  background-color: #42a5f5;
+  background: linear-gradient(180deg, rgba(81, 173, 255, 0.75) 85.67%, rgba(44, 137, 219, 0.75) 100%);
 }
 
 /* Responsividade */
